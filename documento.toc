@@ -26,6 +26,6 @@
 \contentsline {section}{\numberline {6}Full script}{16}{section.6}%
 \contentsline {section}{\numberline {7}SELECT Queries}{22}{section.7}%
 \contentsline {subsection}{\numberline {7.1}SELECT with WHERE, LIKE and COUNT function}{22}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}SELECT with INNER JOIN}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2}SELECT with INNER JOIN and GROUP BY}{22}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}SELECT with RIGHT JOIN}{23}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}SELECT with INNER JOIN, 4 tables}{23}{subsection.7.4}%

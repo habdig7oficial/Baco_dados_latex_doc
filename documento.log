@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,11 +426,11 @@ Overfull \hbox (18.6999pt too wide) in paragraph at lines 47--48
 \pydata@fh@_34240997A16763C011134C570FCC149E.data.minted=\write7
 \openout7 = `_34240997A16763C011134C570FCC149E.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251102180137 34240997A16763C011134C
+runsystem(latexminted config  --timestamp 20251102182151 34240997A16763C011134C
 570FCC149E)...executed safely (allowed).
 
  (./_34240997A16763C011134C570FCC149E.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20251102180137 34240997A16763C01
+runsystem(latexminted cleanconfig  --timestamp 20251102182151 34240997A16763C01
 1134C570FCC149E)...executed safely (allowed).
 
 
@@ -521,21 +521,21 @@ Overfull \hbox (47.71191pt too wide) in paragraph at lines 560--568
 [20]
 
 [21]) (./_minted/613814CFE384FC2A6E1F34CEBCF72A05.highlight.minted)
-(./_minted/709F13E9900409DEBAB5176D97A9441B.highlight.minted
+(./_minted/86098DB3E3FC5AF5D849AD3EA928F069.highlight.minted
 
 [22]) (./_minted/0938B6095E7FA9B0AA5494C675116E61.highlight.minted)
-Overfull \hbox (106.97862pt too wide) in paragraph at lines 933--943
+Overfull \hbox (106.97862pt too wide) in paragraph at lines 938--948
  [][] 
  []
 
-(./_minted/017B4310E2D49009BE0425E821BBEA67.highlight.minted)
-Overfull \hbox (96.99245pt too wide) in paragraph at lines 962--972
+(./_minted/017B4310E2D49009BE0425E821BBEA67.highlight.minted
+
+[23])
+Overfull \hbox (96.99245pt too wide) in paragraph at lines 969--979
  [][] 
  []
 
 
-
-[23]
 
 [24] (./documento.aux)
  ***********
@@ -543,7 +543,7 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `documento.out' has not changed.
-(rerunfilecheck)             Checksum: 930C89B8689112FF48756F1BD6977DE9;5194.
+(rerunfilecheck)             Checksum: B58B963D5B1200B1FA1A92C6C68E29A4;5268.
  ) 
 Here is how much of TeX's memory you used:
  14277 strings out of 473190
@@ -566,7 +566,7 @@ l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documento.pdf (24 pages, 342467 bytes).
+Output written on documento.pdf (24 pages, 343398 bytes).
 PDF statistics:
  355 PDF objects out of 1000 (max. 8388607)
  296 compressed objects within 3 object streams

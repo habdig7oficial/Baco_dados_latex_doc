@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.2}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{follows}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{first\PYGZus{}name\PYGZus{}follows}\PYG{p}{,}
+\PYG{k}{COUNT}\PYG{p}{(}\PYG{n}{id\PYGZus{}to}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{following}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{follow}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{follows}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{follows}\PYG{p}{.}\PYG{n}{id}
+\PYG{k}{GROUP}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{first\PYGZus{}name}\PYG{p}{;}
+\end{MintedVerbatim}
