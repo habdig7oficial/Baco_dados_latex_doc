@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{GENERATED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{k}{IDENTITY}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{title}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{40}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nb}{text}\PYG{+w}{ }\PYG{n+nb}{TEXT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{likes}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{TIMESTAMP}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{n}{NOW}\PYG{p}{(}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}

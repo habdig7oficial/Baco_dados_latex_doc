@@ -1,0 +1,294 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} drop all tables from the last test}
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{CASCADE}\PYG{p}{;}
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{k}{CASCADE}\PYG{p}{;}
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{chats}\PYG{+w}{ }\PYG{k}{CASCADE}\PYG{p}{;}
+
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{;}
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{;}
+\PYG{k}{DROP}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{k}{IF}\PYG{+w}{ }\PYG{k}{EXISTS}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} Re create tables}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{GENERATED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{k}{IDENTITY}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{name}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{description}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{photo\PYGZus{}link}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{TIMESTAMP}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{n}{NOW}\PYG{p}{(}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{GENERATED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{k}{IDENTITY}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{last\PYGZus{}name}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{email}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{age}\PYG{+w}{ }\PYG{n+nb}{SMALLINT}\PYG{+w}{ }\PYG{k}{CHECK}\PYG{p}{(}\PYG{n}{age}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{18}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{phone}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{photo\PYGZus{}link}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{TIMESTAMP}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{n}{NOW}\PYG{p}{(}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{GENERATED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{k}{IDENTITY}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{title}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{45}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nb}{text}\PYG{+w}{ }\PYG{n+nb}{TEXT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{likes}\PYG{+w}{ }\PYG{n+nb}{INTEGER}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{TIMESTAMP}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{n}{NOW}\PYG{p}{(}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}from}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}to}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+
+\PYG{+w}{  }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{(}\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}to}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}usr}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}post}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}chats}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{(}\PYG{n}{id\PYGZus{}usr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}chats}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{anexes}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{GENERATED}\PYG{+w}{ }\PYG{k}{BY}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{k}{IDENTITY}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}post}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{file\PYGZus{}link}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{mime\PYGZus{}type}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{mime\PYGZus{}subtype}\PYG{+w}{ }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{)}\PYG{p}{;}
+
+
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} insert dummy data}
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{description}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}TECNOLOGIES\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat about tech\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Music\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Discussion about music\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Deutsch Sprechen\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A sehr schön über Deutsch Sprachen\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Daily life\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat about daily life\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Travelling\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat to share your experiences around the world\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{;}
+
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{first\PYGZus{}name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{last\PYGZus{}name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{email}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{age}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{phone}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Mateus Felipe\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Silveira Vieira Schreiner\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}10723904@mackenzista.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{19}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Rayana\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Pimentel\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}ra@mackenzista.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{19}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Cidinha\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Delgado\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}cidinha@musica.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{60}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979248\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Vitinho\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Roveri\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}vitor@pianista.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{37}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979236\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Karen\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Comanduli\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}pio\PYGZus{}x@musica.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{50}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}to}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{;}
+
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{title}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nb}{text}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}What is free (as in freedom) software\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Specifically, free software means users have the four essential freedoms: (0) to run the program, (1) to study and change the program in source code form, (2) to redistribute exact copies, and (3) to distribute modified versions.\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Why I like Linux\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}I like linux because is free, is flexible and costumizable\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Best Classical Musics to Sing in a Chor\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}There a lot of options. However Bach, Mozart and Beethoven are good choiches\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}How theach music for children\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Fist is important a lot of patience and perceverance\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}My day today\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}I have a pretty good day today. I awakend and ...\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Was habe ich am letzten Donnerstag gemacht\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Hallo Freunde*innen, am Donnerstag bin ich nach Jundiaí gefahren und ...\PYGZsq{}}
+\PYG{p}{)}
+\PYG{p}{;}
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}usr}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}chats}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{,}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{file\PYGZus{}link}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{mime\PYGZus{}type}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{mime\PYGZus{}subtype}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+m+mi}{1}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}https://www.gnu.org/philosophy/philosophy.html.en\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}html\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}hyperlink\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+m+mi}{1}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}https://www.gnu.org/graphics/agplv3\PYGZhy{}155x51.png\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+m+mi}{2}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}https://www.kernel.org/theme/images/logos/tux.png\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+m+mi}{4}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}https://freesvg.org/img/noun\PYGZus{}project\PYGZus{}928.png\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+m+mi}{4}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}imagem bem legal\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} add like to see if works}
+\PYG{k}{UPDATE}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{SET}\PYG{+w}{ }\PYG{n}{likes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{likes}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{;}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{description}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{;}\PYG{+w}{  }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} chats}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{first\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{email}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{phone}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{}usr}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{SUBSTRING}\PYG{p}{(}\PYG{n+nb}{text}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{l+m+mi}{13}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}
+\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{text\PYGZus{}\PYGZus{}init}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{likes}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{} posts}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} usr\PYGZus{}posts\PYGZus{}chats}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id\PYGZus{}usr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}chats}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.4 3 Tabelas Inner join}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{SUBSTRING}\PYG{p}{(}\PYG{n+nb}{text}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{l+m+mi}{13}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n+nb}{text}\PYG{p}{,}
+\PYG{n}{chats}\PYG{p}{.}\PYG{n}{name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{chat\PYGZus{}\PYGZus{}name}\PYG{p}{,}
+\PYG{n}{first\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}\PYGZus{}id}\PYG{+w}{  }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}usr}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}post}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{chats}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}chats}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} followers}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}to}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{;}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}to}\PYG{p}{,}
+\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{name\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{name\PYGZus{}to}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{follow}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}from}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}to}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} anexes}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{file\PYGZus{}link}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mime\PYGZus{}type}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mime\PYGZus{}subtype}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{;}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{anexes\PYGZus{}\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{post\PYGZus{}\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{SUBSTRING}\PYG{p}{(}\PYG{n}{posts}\PYG{p}{.}\PYG{n}{title}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{title}\PYG{p}{,}
+\PYG{k}{SUBSTRING}\PYG{p}{(}\PYG{n}{file\PYGZus{}link}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{l+m+mi}{15}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{file\PYGZus{}link}\PYG{p}{,}
+\PYG{n}{mime\PYGZus{}type}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mime\PYGZus{}subtype}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{anexes}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{.}\PYG{n}{id\PYGZus{}post}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{p}{;}
+
+\PYG{c+cm}{/*}\PYG{c+cm}{ Query Projeto 2}\PYG{c+cm}{*/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.1}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{COUNT}\PYG{p}{(}\PYG{n}{first\PYGZus{}name}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{search\PYGZus{}by\PYGZus{}email}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{email}\PYG{+w}{ }\PYG{k}{LIKE}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}@mackenzista\PYGZpc{}\PYGZsq{}}\PYG{p}{;}
+
+\PYG{c+cm}{/*}
+\PYG{c+cm}{SELECT id\PYGZus{}post, posts.title, COUNT(id\PYGZus{}post) AS linked\PYGZus{}anexes FROM anexes}
+\PYG{c+cm}{INNER JOIN posts ON anexes.id\PYGZus{}post = posts.id}
+\PYG{c+cm}{WHERE mime\PYGZus{}type = \PYGZsq{}image\PYGZsq{} AND mime\PYGZus{}subtype = \PYGZsq{}png\PYGZsq{}}
+\PYG{c+cm}{GROUP BY id\PYGZus{}post, posts.title;}
+\PYG{c+cm}{*/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.2}
+\PYG{c+cm}{/*}\PYG{c+cm}{SELECT FOLLOW.first\PYGZus{}name AS follow, IS\PYGZus{}FOLLOWED.first\PYGZus{}name FROM follow FOLLOW}
+\PYG{c+cm}{INNER JOIN usr IS\PYGZus{}FOLLOWED ON FOLLOW.id\PYGZus{}from = IS\PYGZus{}FOLLOWED.;}\PYG{c+cm}{*/}
+
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}follow}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{follows}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}followed}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{is\PYGZus{}followed}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{follow}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}follow}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}from}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}follow}\PYG{p}{.}\PYG{n}{id}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}followed}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}follow}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}followed}\PYG{p}{.}\PYG{n}{id}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.3}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{+w}{ }\PYG{n}{title}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{file\PYGZus{}link}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mime\PYGZus{}type}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mime\PYGZus{}subtype}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{anexes}
+\PYG{k}{RIGHT}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{anexes}\PYG{p}{.}\PYG{n}{id}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.4 3 Tabelas Inner join}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{text}\PYG{p}{,}
+\PYG{n}{chats}\PYG{p}{.}\PYG{n}{name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{chat\PYGZus{}\PYGZus{}name}\PYG{p}{,}
+\PYG{n}{first\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}\PYGZus{}id}\PYG{+w}{  }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}usr}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}post}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{chats}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{.}\PYG{n}{id\PYGZus{}chats}\PYG{p}{;}
+
+\end{MintedVerbatim}

@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{SUBSTRING}\PYG{p}{(}\PYG{n+nb}{text}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{k}{FOR}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}
+\PYG{+w}{  }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{text\PYGZus{}\PYGZus{}init}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{likes}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{created\PYGZus{}at}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{;}
+\end{MintedVerbatim}

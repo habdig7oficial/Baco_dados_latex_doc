@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{id\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}to}\PYG{p}{,}
+\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{name\PYGZus{}from}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{p}{.}\PYG{n}{first\PYGZus{}name}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{name\PYGZus{}to}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{follow}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}from}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}from}
+\PYG{k}{INNER}\PYG{+w}{ }\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}to}\PYG{p}{.}\PYG{n}{id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{follow}\PYG{p}{.}\PYG{n}{id\PYGZus{}to}\PYG{p}{;}
+\end{MintedVerbatim}

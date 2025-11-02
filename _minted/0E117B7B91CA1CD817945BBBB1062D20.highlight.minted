@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{id\PYGZus{}usr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}chats}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{;}
+\end{MintedVerbatim}

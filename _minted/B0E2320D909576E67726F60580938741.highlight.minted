@@ -1,0 +1,26 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{description}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}TECNOLOGIES\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat about tech\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Music\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Discussion about music\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Deutsch Sprechen\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A sehr schön über Deutsch Sprachen\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Daily life\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat about daily life\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Travelling\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}A chat to share your experiences around the world\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}

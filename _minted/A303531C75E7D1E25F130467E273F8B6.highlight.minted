@@ -1,0 +1,26 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{title}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nb}{text}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}What is free (as in freedom) software\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Specifically, free software means users have the four essential freedoms: (0) to run the program, (1) to study and change the program in source code form, (2) to redistribute exact copies, and (3) to distribute modified versions.\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Why I like Linux\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}I like linux because is free, is flexible and costumizable\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Best Classical Musics to Sing in a Chor\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}There a lot of options. However Bach, Mozart and Beethoven are good choiches\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}How theach music for children\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}Fist is important a lot of patience and perceverance\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{,}
+\PYG{p}{(}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}My day today\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+s+s1}{\PYGZsq{}I have a pretty good day today. I awakend and ...\PYGZsq{}}
+\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}

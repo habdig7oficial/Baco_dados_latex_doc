@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{usr\PYGZus{}posts\PYGZus{}chats}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}usr}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{usr}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}post}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{posts}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{id\PYGZus{}chats}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{chats}\PYG{p}{(}\PYG{n}{id}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{p}{(}\PYG{n}{id\PYGZus{}usr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}post}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id\PYGZus{}chats}\PYG{p}{)}
+\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}

@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{} 3.1}
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{k}{COUNT}\PYG{p}{(}\PYG{n}{first\PYGZus{}name}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{AS}\PYG{+w}{ }\PYG{n}{search\PYGZus{}by\PYGZus{}email}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{usr}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{email}\PYG{+w}{ }\PYG{k}{LIKE}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}@mackenzista\PYGZpc{}\PYGZsq{}}\PYG{p}{;}
+\end{MintedVerbatim}

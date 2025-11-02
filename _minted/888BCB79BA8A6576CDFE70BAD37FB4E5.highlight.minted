@@ -1,0 +1,45 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+
+\PYG{k}{INSERT}\PYG{+w}{ }\PYG{k}{INTO}\PYG{+w}{ }\PYG{n}{usr}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{n}{first\PYGZus{}name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{last\PYGZus{}name}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{email}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{age}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n}{phone}
+\PYG{p}{)}
+\PYG{k}{VALUES}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Mateus Felipe\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Silveira Vieira Schreiner\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}10723904@mackenzista.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{19}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Rayana\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Pimentel\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}ra@mackenzie.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{19}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Cidinha\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Delgado\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}cidinha@musica.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{60}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979248\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Vitinho\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Roveri\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}vitor@pianista.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{37}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979236\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{(}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Karen\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}Comanduli\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}pio\PYGZus{}x@musica.com\PYGZsq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+m+mi}{50}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s+s1}{\PYGZsq{}11 979246\PYGZhy{}6876\PYGZsq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}
