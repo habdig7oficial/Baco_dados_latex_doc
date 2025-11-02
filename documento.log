@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -165,7 +165,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip51
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
@@ -178,10 +200,7 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen146
 \Gin@req@width=\dimen147
 )
@@ -294,25 +313,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \CommentStream=\write4
 
 Excluding comment 'comment')
-(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count309
@@ -321,25 +321,25 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./documento.aux)
 \openout1 = `documento.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-Package hyperref Info: Link coloring OFF on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+Package hyperref Info: Link coloring OFF on input line 14.
  (./documento.out) (./documento.out)
 \@outlinefile=\write5
 \openout5 = `documento.out'.
@@ -368,11 +368,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 16.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 17.
 
 (./documento.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -397,26 +397,26 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 
 
 [2]
-<md_conceitual.png, id=174, 1064.97874pt x 905.3825pt>
+<md_conceitual.png, id=181, 1064.97874pt x 905.3825pt>
 File: md_conceitual.png Graphic file (type png)
 <use md_conceitual.png>
-Package pdftex.def Info: md_conceitual.png  used on input line 30.
+Package pdftex.def Info: md_conceitual.png  used on input line 39.
 (pdftex.def)             Requested size: 425.98395pt x 362.14659pt.
 
-Overfull \hbox (80.98395pt too wide) in paragraph at lines 30--31
+Overfull \hbox (80.98395pt too wide) in paragraph at lines 39--40
 [] 
  []
 
 
 
 [3 <./md_conceitual.png>]
-<md_logico.png, id=181, 1653.17625pt x 1332.98pt>
+<md_logico.png, id=188, 1653.17625pt x 1332.98pt>
 File: md_logico.png Graphic file (type png)
 <use md_logico.png>
-Package pdftex.def Info: md_logico.png  used on input line 38.
+Package pdftex.def Info: md_logico.png  used on input line 47.
 (pdftex.def)             Requested size: 363.6999pt x 293.2565pt.
 
-Overfull \hbox (18.6999pt too wide) in paragraph at lines 38--39
+Overfull \hbox (18.6999pt too wide) in paragraph at lines 47--48
  [] 
  []
 
@@ -426,11 +426,11 @@ Overfull \hbox (18.6999pt too wide) in paragraph at lines 38--39
 \pydata@fh@_34240997A16763C011134C570FCC149E.data.minted=\write7
 \openout7 = `_34240997A16763C011134C570FCC149E.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251102171010 34240997A16763C011134C
+runsystem(latexminted config  --timestamp 20251102180137 34240997A16763C011134C
 570FCC149E)...executed safely (allowed).
 
  (./_34240997A16763C011134C570FCC149E.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20251102171010 34240997A16763C01
+runsystem(latexminted cleanconfig  --timestamp 20251102180137 34240997A16763C01
 1134C570FCC149E)...executed safely (allowed).
 
 
@@ -449,65 +449,66 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 [6]) (./_minted/B0E2320D909576E67726F60580938741.highlight.minted)
 (./_minted/888BCB79BA8A6576CDFE70BAD37FB4E5.highlight.minted
 
-[7]) (./_minted/A303531C75E7D1E25F130467E273F8B6.highlight.minted
+[7]) (./_minted/CF1B9F3649DD4625DFF8A737E303FDFA.highlight.minted
 
-[8]) (./_minted/FAF4DD7FC5C216F74D6BB399BBB67537.highlight.minted)
-(./_minted/9CE0E9B378F317ECDAB426941C182B63.highlight.minted)
-(./_minted/EC2BDE0AD01C27F4333EDF8DD75561B6.highlight.minted
+[8]) (./_minted/4796D0CF5328F513F2D337E34EADA893.highlight.minted)
+(./_minted/9CE0E9B378F317ECDAB426941C182B63.highlight.minted
 
-[9])
+[9]) (./_minted/EC2BDE0AD01C27F4333EDF8DD75561B6.highlight.minted
 
-[10] (./_minted/15A7143AFA3A35CAD754839366D2A6E4.highlight.minted)
-Overfull \hbox (124.58417pt too wide) in paragraph at lines 349--358
+[10])
+
+[11] (./_minted/15A7143AFA3A35CAD754839366D2A6E4.highlight.minted)
+Overfull \hbox (124.58417pt too wide) in paragraph at lines 369--378
  [][] 
  []
 
 (./_minted/8C3046C43CD5F32568C29E8EFB99CE18.highlight.minted)
-Overfull \hbox (104.30644pt too wide) in paragraph at lines 372--381
+Overfull \hbox (104.30644pt too wide) in paragraph at lines 392--401
  [][] 
  []
 
 (./_minted/F6EF7BA6BA9221C0A7984CB458EDBC1E.highlight.minted)
-Overfull \hbox (99.41748pt too wide) in paragraph at lines 397--406
+Overfull \hbox (131.05647pt too wide) in paragraph at lines 417--427
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 410.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 431.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 410.
+(hyperref)                removing `\\' on input line 431.
 
 (./_minted/0E117B7B91CA1CD817945BBBB1062D20.highlight.minted
 
-[11]) (./_minted/C979B32DECA0324AA94F382A10FA7116.highlight.minted)
-Overfull \hbox (118.43687pt too wide) in paragraph at lines 444--453
-[][]  
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 457.
-
-(./_minted/80E7DA90835C99496599DE609A70E851.highlight.minted
-
-[12]) (./_minted/A284B2720AAE89C2CA5ECBD3DA432924.highlight.minted)
-
-[13] (./_minted/67A6BA04BE98E62B19D2AB05E7E701AC.highlight.minted)
-Overfull \hbox (96.4121pt too wide) in paragraph at lines 515--523
-[][]  
- []
-
-(./_minted/22C611BCE90AD0F9399BC8D3E17FB955.highlight.minted)
-Overfull \hbox (47.71191pt too wide) in paragraph at lines 536--544
+[12]) (./_minted/C979B32DECA0324AA94F382A10FA7116.highlight.minted)
+Overfull \hbox (122.29805pt too wide) in paragraph at lines 466--476
  [][] 
  []
 
 
 
-[14] (./_minted/12B7C60AD3835A731E39FD9415F8041D.highlight.minted
+[13]
 
-[15]
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 481.
+
+(./_minted/80E7DA90835C99496599DE609A70E851.highlight.minted)
+(./_minted/A284B2720AAE89C2CA5ECBD3DA432924.highlight.minted)
+
+[14] (./_minted/67A6BA04BE98E62B19D2AB05E7E701AC.highlight.minted)
+Overfull \hbox (96.4121pt too wide) in paragraph at lines 539--547
+[][]  
+ []
+
+(./_minted/22C611BCE90AD0F9399BC8D3E17FB955.highlight.minted)
+Overfull \hbox (47.71191pt too wide) in paragraph at lines 560--568
+ [][] 
+ []
+
+
+
+[15] (./_minted/1690332DE5D169CF2BD20984A6FB7D01.highlight.minted
 
 [16]
 
@@ -517,49 +518,41 @@ Overfull \hbox (47.71191pt too wide) in paragraph at lines 536--544
 
 [19]
 
-[20]) (./_minted/613814CFE384FC2A6E1F34CEBCF72A05.highlight.minted)
-(./_minted/0938B6095E7FA9B0AA5494C675116E61.highlight.minted)
-Overfull \hbox (106.97862pt too wide) in paragraph at lines 884--894
+[20]
+
+[21]) (./_minted/613814CFE384FC2A6E1F34CEBCF72A05.highlight.minted)
+(./_minted/709F13E9900409DEBAB5176D97A9441B.highlight.minted
+
+[22]) (./_minted/0938B6095E7FA9B0AA5494C675116E61.highlight.minted)
+Overfull \hbox (106.97862pt too wide) in paragraph at lines 933--943
+ [][] 
+ []
+
+(./_minted/017B4310E2D49009BE0425E821BBEA67.highlight.minted)
+Overfull \hbox (96.99245pt too wide) in paragraph at lines 962--972
  [][] 
  []
 
 
 
-[21]
-\openout7 = `_34240997A16763C011134C570FCC149E.data.minted'.
+[23]
 
-runsystem(latexminted highlight  --timestamp 20251102171010 34240997A16763C0111
-34C570FCC149E)...executed safely (allowed).
-
- (./_minted/017B4310E2D49009BE0425E821BBEA67.highlight.minted)
-Overfull \hbox (96.99245pt too wide) in paragraph at lines 913--923
- [][] 
- []
-
-
-
-[22]
-\openout7 = `_34240997A16763C011134C570FCC149E.data.minted'.
-
-runsystem(latexminted clean  --timestamp 20251102171010 34240997A16763C011134C5
-70FCC149E)...executed safely (allowed).
-
- (./documento.aux)
+[24] (./documento.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `documento.out' has not changed.
-(rerunfilecheck)             Checksum: 53FA52BD4D4F513A6ACC27C7C2B9A17C;5017.
+(rerunfilecheck)             Checksum: 930C89B8689112FF48756F1BD6977DE9;5194.
  ) 
 Here is how much of TeX's memory you used:
- 14262 strings out of 473190
- 289582 string characters out of 5715801
- 793586 words of memory out of 5000000
- 37232 multiletter control sequences out of 15000+600000
+ 14277 strings out of 473190
+ 290109 string characters out of 5715801
+ 793965 words of memory out of 5000000
+ 37241 multiletter control sequences out of 15000+600000
  564431 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1191b,1268s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1191b,1271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb>
@@ -573,10 +566,10 @@ l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documento.pdf (22 pages, 339249 bytes).
+Output written on documento.pdf (24 pages, 342467 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 
