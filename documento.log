@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  2 NOV 2025 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,11 +426,11 @@ Overfull \hbox (18.6999pt too wide) in paragraph at lines 47--48
 \pydata@fh@_34240997A16763C011134C570FCC149E.data.minted=\write7
 \openout7 = `_34240997A16763C011134C570FCC149E.data.minted'.
 
-runsystem(latexminted config  --timestamp 20251102182151 34240997A16763C011134C
+runsystem(latexminted config  --timestamp 20251102183421 34240997A16763C011134C
 570FCC149E)...executed safely (allowed).
 
  (./_34240997A16763C011134C570FCC149E.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20251102182151 34240997A16763C01
+runsystem(latexminted cleanconfig  --timestamp 20251102183421 34240997A16763C01
 1134C570FCC149E)...executed safely (allowed).
 
 
@@ -451,38 +451,38 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 
 [7]) (./_minted/CF1B9F3649DD4625DFF8A737E303FDFA.highlight.minted
 
-[8]) (./_minted/4796D0CF5328F513F2D337E34EADA893.highlight.minted)
-(./_minted/9CE0E9B378F317ECDAB426941C182B63.highlight.minted
+[8]) (./_minted/4796D0CF5328F513F2D337E34EADA893.highlight.minted
 
-[9]) (./_minted/EC2BDE0AD01C27F4333EDF8DD75561B6.highlight.minted
+[9]) (./_minted/9CE0E9B378F317ECDAB426941C182B63.highlight.minted)
+(./_minted/EC2BDE0AD01C27F4333EDF8DD75561B6.highlight.minted
 
 [10])
 
 [11] (./_minted/15A7143AFA3A35CAD754839366D2A6E4.highlight.minted)
-Overfull \hbox (124.58417pt too wide) in paragraph at lines 369--378
+Overfull \hbox (124.58417pt too wide) in paragraph at lines 377--386
  [][] 
  []
 
 (./_minted/8C3046C43CD5F32568C29E8EFB99CE18.highlight.minted)
-Overfull \hbox (104.30644pt too wide) in paragraph at lines 392--401
+Overfull \hbox (104.30644pt too wide) in paragraph at lines 400--409
  [][] 
  []
 
 (./_minted/F6EF7BA6BA9221C0A7984CB458EDBC1E.highlight.minted)
-Overfull \hbox (131.05647pt too wide) in paragraph at lines 417--427
+Overfull \hbox (131.05647pt too wide) in paragraph at lines 425--435
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 431.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 439.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 431.
+(hyperref)                removing `\\' on input line 439.
 
 (./_minted/0E117B7B91CA1CD817945BBBB1062D20.highlight.minted
 
 [12]) (./_minted/C979B32DECA0324AA94F382A10FA7116.highlight.minted)
-Overfull \hbox (122.29805pt too wide) in paragraph at lines 466--476
+Overfull \hbox (122.29805pt too wide) in paragraph at lines 474--484
  [][] 
  []
 
@@ -491,18 +491,18 @@ Overfull \hbox (122.29805pt too wide) in paragraph at lines 466--476
 [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 481.
+(hyperref)                removing `\\' on input line 489.
 
 (./_minted/80E7DA90835C99496599DE609A70E851.highlight.minted)
 (./_minted/A284B2720AAE89C2CA5ECBD3DA432924.highlight.minted)
 
 [14] (./_minted/67A6BA04BE98E62B19D2AB05E7E701AC.highlight.minted)
-Overfull \hbox (96.4121pt too wide) in paragraph at lines 539--547
+Overfull \hbox (96.4121pt too wide) in paragraph at lines 547--555
 [][]  
  []
 
 (./_minted/22C611BCE90AD0F9399BC8D3E17FB955.highlight.minted)
-Overfull \hbox (47.71191pt too wide) in paragraph at lines 560--568
+Overfull \hbox (47.71191pt too wide) in paragraph at lines 568--576
  [][] 
  []
 
@@ -524,14 +524,14 @@ Overfull \hbox (47.71191pt too wide) in paragraph at lines 560--568
 (./_minted/86098DB3E3FC5AF5D849AD3EA928F069.highlight.minted
 
 [22]) (./_minted/0938B6095E7FA9B0AA5494C675116E61.highlight.minted)
-Overfull \hbox (106.97862pt too wide) in paragraph at lines 938--948
+Overfull \hbox (106.97862pt too wide) in paragraph at lines 946--956
  [][] 
  []
 
 (./_minted/017B4310E2D49009BE0425E821BBEA67.highlight.minted
 
 [23])
-Overfull \hbox (96.99245pt too wide) in paragraph at lines 969--979
+Overfull \hbox (96.99245pt too wide) in paragraph at lines 977--987
  [][] 
  []
 
@@ -566,7 +566,7 @@ l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documento.pdf (24 pages, 343398 bytes).
+Output written on documento.pdf (24 pages, 344007 bytes).
 PDF statistics:
  355 PDF objects out of 1000 (max. 8388607)
  296 compressed objects within 3 object streams
